@@ -37,7 +37,7 @@
 
 <p id="insomniaButton" 
 align="center">
-  <a href="https://insomnia.rest/run/?label=ApiGerenciarProcessos%20-%20sibelly&uri=https://github.com/sibelly/softplan-desafio-fullstack-sibelly-cavalcante/blob/master/.github/Insomnia.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Executar no Insomnia"></a>
+  <a href="https://insomnia.rest/run/?label=ApiGerenciarProcessos%20-%20sibelly&uri=https://github.com/sibelly/softplan-desafio-fullstack-sibelly-cavalcante/blob/master/Insomnia.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Executar no Insomnia"></a>
 </p>
 
 ## 💇🏻‍♂️ Sobre o projeto
