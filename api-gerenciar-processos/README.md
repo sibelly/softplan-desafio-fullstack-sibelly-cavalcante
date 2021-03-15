@@ -6,9 +6,14 @@
   Aplicação backend para gerenciar seus processos e pareceres.
 </h3>
 
+<p id="insomniaButton" 
+align="center">
+  <a href="https://insomnia.rest/run/?label=ApiGerenciarProcessos%20-%20sibelly&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fsibelly%2Fsoftplan-desafio-fullstack-sibelly-cavalcante%2Fmaster%2FInsomnia.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Executar no Insomnia"></a>
+</p>
+
 ## 💻 Inicializando o projeto
 
-Importe o `Insomnia.json` on Insomnia App or click on [Run in Insomnia](#insomniaButton) button
+Importe o `Insomnia.json` no Insomnia App ou clique no botão [Run in Insomnia](#insomniaButton)
 
 ### Requisitos
 
