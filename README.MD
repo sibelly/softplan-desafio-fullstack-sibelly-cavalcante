@@ -105,4 +105,4 @@ Esse projeto utiliza a licença MIT License - veja o arquivo [LICENSE](LICENSE) 
 
 ---
 
-Feito com amor 💜 &nbsp;by Sibelly Cavalcante 👋 &nbsp;[Veja meu linkedin](https://www.linkedin.com/in/sibelly-cavalcante/)
+Feito com amor 💜 &nbsp;por Sibelly Cavalcante 👋 &nbsp;[Veja meu linkedin](https://www.linkedin.com/in/sibelly-cavalcante/)
