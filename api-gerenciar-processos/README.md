@@ -36,6 +36,10 @@ $ git clone https://github.com/sibelly/softplan-desafio-fullstack-sibelly-cavalc
 # Instala as dependências
 $ mvn clean install
 
+# Sem a utilização do docker
+mvn spring-boot:run
+
+# Utilizando docker
 # Cria imagem a partir da Dockerfile
 $ docker build  -t api-gerenciar-processos . 
 
