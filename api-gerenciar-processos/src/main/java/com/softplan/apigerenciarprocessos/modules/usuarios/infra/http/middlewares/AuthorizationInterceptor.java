@@ -9,8 +9,10 @@ public class AuthorizationInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
 
+        
         String auth = request.getHeader("Authorization");
         String uri = request.getRequestURI();
+        System.out.println("********************** AuthorizationInterceptor preHandle" + !uri.contains("sessoes"));
 
         if ((uri == null || !uri.contains("sessoes")) && (auth == null || auth.isEmpty())) {
             response.setStatus(401);

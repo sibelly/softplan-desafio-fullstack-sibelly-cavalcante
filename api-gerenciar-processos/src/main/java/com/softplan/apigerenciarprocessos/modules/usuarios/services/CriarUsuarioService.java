@@ -4,6 +4,7 @@ import com.softplan.apigerenciarprocessos.modules.usuarios.entities.Usuario;
 import com.softplan.apigerenciarprocessos.modules.usuarios.repositories.UsuariosRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -17,6 +18,9 @@ public class CriarUsuarioService {
   }
 
   public Usuario criarUsuario(Usuario usuario) {
-      return usuariosRepository.save(usuario);
+    BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+    String hashedSenha = passwordEncoder.encode(usuario.getSenha());
+    usuario.setSenha(hashedSenha);
+    return usuariosRepository.save(usuario);
   }
 }
