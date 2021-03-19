@@ -58,17 +58,9 @@ Atribuir um ou mais usuários a realizar um parecer sobre um processo.
 Visualizar processos pendentes de parecer.
 Incluir o parecer sobre o processo.
 
-
-## 🚀 Tecnologias
-
-Tecnologias utilizadas
-
-- [Spring Boot](https://spring.io/projects/spring-boot)
-- [Docker](https://www.docker.com/)
-
 ## 💻 Inicializando o projeto
 
-Importe o `Insomnia.json` on Insomnia App or click on [Run in Insomnia](#insomniaButton) button
+Importe o `Insomnia.json` no [Insomnia](https://insomnia.rest/download) ou clique no botão [Run in Insomnia](#insomniaButton)
 
 ### Requisitos
 
@@ -76,8 +68,9 @@ Importe o `Insomnia.json` on Insomnia App or click on [Run in Insomnia](#insomni
 - [Apache Maven](https://maven.apache.org/)
 - [Docker](https://www.docker.com/)
 - [Yarn](https://classic.yarnpkg.com/) or [npm](https://www.npmjs.com/)
+- [React](https://pt-br.reactjs.org/)
 
-> Obs.: Recomendo a utilização de docker
+> Obs.: Recomendo a utilização de docker para a api
 
 ### Executar os projetos
 Seguir os passos listados nos repositórios:

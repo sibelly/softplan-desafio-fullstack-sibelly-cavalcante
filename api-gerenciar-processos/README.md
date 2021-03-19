@@ -13,9 +13,9 @@ align="center">
 
 ## 💻 Inicializando o projeto
 
-Importe o `Insomnia.json` no Insomnia App ou clique no botão [Run in Insomnia](#insomniaButton)
+Importe o `Insomnia.json` no [Insomnia](https://insomnia.rest/download) ou clique no botão [Run in Insomnia](#insomniaButton)
 
-### Tecnologias
+### 🚀 Tecnologias
 
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Apache Maven](https://maven.apache.org/)
