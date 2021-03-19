@@ -79,26 +79,26 @@ Importe o `Insomnia.json` on Insomnia App or click on [Run in Insomnia](#insomni
 
 > Obs.: Recomendo a utilização de docker
 
-**Clonar o projeto e acessar a pasta**
+### Executar os projetos
+Seguir os passos listados nos repositórios:
+- [Backend](https://github.com/sibelly/softplan-desafio-fullstack-sibelly-cavalcante/tree/develop/api-gerenciar-processos)
+- [Frontend](https://github.com/sibelly/softplan-desafio-fullstack-sibelly-cavalcante/tree/develop/front-gerenciar-processos)
 
-```bash
-$ git clone https://github.com/sibelly/softplan-desafio-fullstack-sibelly-cavalcante.git && cd api-gerenciar-projetos
-```
+### Sobre o desafio
 
-**Siga os passos a seguir**
+Aprendi a utilizar o [Spring Boot](https://spring.io/projects/spring-boot) e entender seu funcionamento na criação da autenticação utilizando [Jwt token](https://jwt.io/) e [Bcrypt](https://www.npmjs.com/package/bcrypt) para segurança das informações. E a diferença entre OncePerRequestFilter e HandlerInterceptor para criação dos middlewares que interceptam as requisições, nesse caso para confirmar a existência de um token.
 
-```bash
-# Instala as dependências
-$ mvn clean install
+O login está sendo feito pelo front. Porém em relação às outras tarefas o front não ficou completo.
+Já a api está mais completa cumprindo a maioria do requisitos listados.
 
-# Cria imagem a partir da Dockerfile
-$ docker build  -t api-gerenciar-processos . 
+Foi utilizado o banco em memória [H2](https://www.h2database.com/html/main.html).
 
-# Executa o container a partir da imagem criada no comando anterior
-$ docker run --name api-gerenciar-processos -p 8080:8080 api-gerenciar-processos
+### Melhorias no projeto
 
-# Muito bem, o projeto da api foi inicializado!
-```
+- Finalizar front para criar usuário e para os outros recursos (processos e pareceres)
+- Dockerizar o front.
+- Configurar um banco de dados sem ser da memória (MySQL, PostgreSQL).
+
 ## 📝 Licença
 
 Esse projeto utiliza a licença MIT License - veja o arquivo [LICENSE](LICENSE) para maiores detalhes.

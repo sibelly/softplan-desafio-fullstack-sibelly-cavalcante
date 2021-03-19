@@ -23,6 +23,7 @@ Importe o `Insomnia.json` no Insomnia App ou clique no botão [Run in Insomnia](
 - [Spring Security](https://spring.io/projects/spring-security)
 - [Jwt](https://jwt.io/)
 - [Bcrypt](https://www.npmjs.com/package/bcrypt)
+- [H2](https://www.h2database.com/html/main.html)
 
 > Obs.: Recomendo a utilização de docker
 
