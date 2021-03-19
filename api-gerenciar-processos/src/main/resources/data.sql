@@ -13,3 +13,9 @@ INSERT INTO processos_usuarios (usuario_id, processo_id) VALUES
   (3, 2),
   (3, 3);
 
+INSERT INTO pareceres (descricao, usuario_id, processo_id) VALUES
+  ('Parecer 1', 3, 1),
+  ('Parecer 2', 3, 2),
+  ('Parecer 3', 3, 3);
+
+
