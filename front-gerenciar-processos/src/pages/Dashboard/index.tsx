@@ -6,7 +6,7 @@ import logoImg from '../../assets/logo.svg';
 import { useAuth } from '../../hooks/auth';
 
 const Dashboard: React.FC = () => {
-  const { signOut, user } = useAuth();
+  const { signOut, usuario } = useAuth();
   return (
     <Container>
       <Header>
@@ -14,10 +14,13 @@ const Dashboard: React.FC = () => {
           <img src={logoImg} alt="Softplan" />
 
           <Profile>
-            <img src={user.avatar_url} alt={user.name} />
+            <img
+              src="https://img.favpng.com/8/19/8/united-states-avatar-organization-information-png-favpng-J9DvUE98TmbHSUqsmAgu3FpGw.jpg"
+              alt={usuario.username}
+            />
             <div>
               <span>Bem-vindo</span>
-              <strong>{user.name}</strong>
+              <strong>{usuario.username}</strong>
             </div>
           </Profile>
           <button type="button" onClick={signOut}>

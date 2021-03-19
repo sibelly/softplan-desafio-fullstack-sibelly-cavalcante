@@ -1,15 +1,14 @@
 import React, { createContext, useCallback, useState, useContext } from 'react';
 import api from '../services/api';
 
-interface User {
+interface Usuario {
   id: string;
-  name: string;
-  avatar_url: string;
+  username: string;
 }
 
 interface AuthState {
   token: string;
-  user: User;
+  usuario: Usuario;
 }
 
 interface SignInCredentials {
@@ -18,7 +17,7 @@ interface SignInCredentials {
 }
 
 interface AuthContextData {
-  user: User;
+  usuario: Usuario;
   signIn(credentials: SignInCredentials): Promise<void>;
   signOut(): void;
 }
@@ -28,10 +27,10 @@ const AuthContext = createContext<AuthContextData>({} as AuthContextData);
 const AuthProvider: React.FC = ({ children }) => {
   const [data, setData] = useState<AuthState>(() => {
     const token = localStorage.getItem('@GerenciarProcessos:token');
-    const user = localStorage.getItem('@GerenciarProcessos:user');
+    const usuario = localStorage.getItem('@GerenciarProcessos:usuario');
 
-    if (token && user) {
-      return { token, user: JSON.parse(user) };
+    if (token && usuario) {
+      return { token, usuario: JSON.parse(usuario) };
     }
 
     return {} as AuthState;
@@ -43,24 +42,27 @@ const AuthProvider: React.FC = ({ children }) => {
       senha,
     });
     console.log('adasdasd', response.data);
-    const user = response.data.usuario;
+    const { usuario } = response.data;
     const token = response.data.jwt;
 
     localStorage.setItem('@GerenciarProcessos:token', token);
-    localStorage.setItem('@GerenciarProcessos:user', JSON.stringify(user));
+    localStorage.setItem(
+      '@GerenciarProcessos:usuario',
+      JSON.stringify(usuario),
+    );
 
-    setData({ token, user });
+    setData({ token, usuario });
   }, []);
 
   const signOut = useCallback(() => {
     localStorage.removeItem('@GerenciarProcessos:token');
-    localStorage.removeItem('@GerenciarProcessos:user');
+    localStorage.removeItem('@GerenciarProcessos:usuario');
 
     setData({} as AuthState);
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user: data.user, signIn, signOut }}>
+    <AuthContext.Provider value={{ usuario: data.usuario, signIn, signOut }}>
       {children}
     </AuthContext.Provider>
   );

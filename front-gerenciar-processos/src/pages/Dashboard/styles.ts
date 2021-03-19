@@ -4,7 +4,7 @@ export const Container = styled.div``;
 
 export const Header = styled.header`
   padding: 32px 0;
-  background: #28262e;
+  background: #484d62;
 `;
 
 export const HeaderContent = styled.div`
@@ -14,7 +14,7 @@ export const HeaderContent = styled.div`
   align-items: center;
 
   > img {
-    height: 80px;
+    height: 40px;
   }
 
   button {
@@ -52,7 +52,7 @@ export const Profile = styled.div`
     }
 
     strong {
-      color: #ff9000;
+      color: #4490b4;
     }
   }
 `;
