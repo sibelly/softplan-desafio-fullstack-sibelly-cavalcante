@@ -11,7 +11,7 @@ align="center">
   <a href="https://insomnia.rest/run/?label=ApiGerenciarProcessos%20-%20sibelly&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fsibelly%2Fsoftplan-desafio-fullstack-sibelly-cavalcante%2Fmaster%2FInsomnia.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Executar no Insomnia"></a>
 </p>
 
-### 🚀 Tecnologias
+## 🚀 Tecnologias
 
 - [ReactJS](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -44,6 +44,17 @@ $ yarn start
 
 # Muito bem, o projeto da api foi inicializado!
 ```
+
+**Usuário para logar**
+
+Fazer o login com o seguinte usuário:
+```bash
+{
+	"email": "admin@email.com",
+	"senha": "123"
+}
+```
+
 ## 📝 Licença
 
 Esse projeto utiliza a licença MIT License - veja o arquivo [LICENSE](LICENSE) para maiores detalhes.

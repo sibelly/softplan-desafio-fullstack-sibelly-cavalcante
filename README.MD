@@ -79,7 +79,7 @@ Seguir os passos listados nos repositórios:
 - [Backend](https://github.com/sibelly/softplan-desafio-fullstack-sibelly-cavalcante/tree/develop/api-gerenciar-processos)
 - [Frontend](https://github.com/sibelly/softplan-desafio-fullstack-sibelly-cavalcante/tree/develop/front-gerenciar-processos)
 
-### Sobre o desafio
+## :heavy_exclamation_mark: Sobre o desafio
 
 Aprendi a utilizar o [Spring Boot](https://spring.io/projects/spring-boot) e entender seu funcionamento na criação da autenticação utilizando [Jwt token](https://jwt.io/) e [Bcrypt](https://www.npmjs.com/package/bcrypt) para segurança das informações. E a diferença entre OncePerRequestFilter e HandlerInterceptor para criação dos middlewares que interceptam as requisições, nesse caso para confirmar a existência de um token.
 
@@ -90,7 +90,7 @@ Foi utilizado o banco em memória [H2](https://www.h2database.com/html/main.html
 
 A estrutura da api segue o DDD (Domain-Driven Design).
 
-### Melhorias no projeto
+## :chart_with_upwards_trend: Melhorias no projeto
 
 - Finalizar front para criar usuário e para os outros recursos (processos e pareceres).
 - Dockerizar o front.
