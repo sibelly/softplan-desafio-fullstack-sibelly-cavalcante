@@ -40,7 +40,7 @@ align="center">
   <a href="https://insomnia.rest/run/?label=ApiGerenciarProcessos%20-%20sibelly&uri=https%3A%2F%2Fraw.githubusercontent.com%2Fsibelly%2Fsoftplan-desafio-fullstack-sibelly-cavalcante%2Fmaster%2FInsomnia.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Executar no Insomnia"></a>
 </p>
 
-## 💇🏻‍♂️ Sobre o projeto
+## 💻 Sobre o projeto
 
 Uma aplicação web responsável por gerenciar processos.
 
