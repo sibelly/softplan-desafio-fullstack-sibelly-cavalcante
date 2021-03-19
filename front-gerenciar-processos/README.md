@@ -24,7 +24,7 @@ align="center">
 - [Axios](https://github.com/axios/axios)
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
-- [EditorConfig](https://editorconfig.org/
+- [EditorConfig](https://editorconfig.org/)
 
 **Clonar o projeto e acessar a pasta**
 
