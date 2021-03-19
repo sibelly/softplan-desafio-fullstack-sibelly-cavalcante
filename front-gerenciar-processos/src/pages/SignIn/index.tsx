@@ -18,7 +18,7 @@ import { Container, Content, AnimationContainer } from './styles';
 
 interface SignInFormData {
   email: string;
-  password: string;
+  senha: string;
 }
 
 const SignIn: React.FC = () => {
@@ -36,7 +36,7 @@ const SignIn: React.FC = () => {
           email: Yup.string()
             .required('E-mail obrigatório')
             .email('Digite um e-mail válido'),
-          password: Yup.string().required('Senha obrigatória'),
+          senha: Yup.string().required('Senha obrigatória'),
         });
 
         await schema.validate(data, {
@@ -45,7 +45,7 @@ const SignIn: React.FC = () => {
 
         await signIn({
           email: data.email,
-          password: data.password,
+          senha: data.senha,
         });
 
         history.push('/dashboard');
@@ -75,7 +75,7 @@ const SignIn: React.FC = () => {
             <h1>Faça seu logon</h1>
             <Input name="email" icon={FiMail} placeholder="Email" />
             <Input
-              name="password"
+              name="senha"
               icon={FiLock}
               type="password"
               placeholder="Senha"

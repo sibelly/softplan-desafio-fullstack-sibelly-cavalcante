@@ -15,12 +15,14 @@ align="center">
 
 Importe o `Insomnia.json` no Insomnia App ou clique no botão [Run in Insomnia](#insomniaButton)
 
-### Requisitos
+### Tecnologias
 
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Apache Maven](https://maven.apache.org/)
 - [Docker](https://www.docker.com/)
-- [Yarn](https://classic.yarnpkg.com/) or [npm](https://www.npmjs.com/)
+- [Spring Security](https://spring.io/projects/spring-security)
+- [Jwt](https://jwt.io/)
+- [Bcrypt](https://www.npmjs.com/package/bcrypt)
 
 > Obs.: Recomendo a utilização de docker
 
@@ -48,3 +50,10 @@ $ docker run --name api-gerenciar-processos -p 8080:8080 api-gerenciar-processos
 
 # Muito bem, o projeto da api foi inicializado!
 ```
+## 📝 Licença
+
+Esse projeto utiliza a licença MIT License - veja o arquivo [LICENSE](LICENSE) para maiores detalhes.
+
+---
+
+Feito com amor 💜 &nbsp;por Sibelly Cavalcante 👋 &nbsp;[Veja meu linkedin](https://www.linkedin.com/in/sibelly-cavalcante/)

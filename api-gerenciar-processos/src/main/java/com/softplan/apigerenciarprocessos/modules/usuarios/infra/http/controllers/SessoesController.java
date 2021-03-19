@@ -1,17 +1,22 @@
 package com.softplan.apigerenciarprocessos.modules.usuarios.infra.http.controllers;
 
-import javax.servlet.http.HttpServletResponse;
-
+import com.softplan.apigerenciarprocessos.modules.usuarios.entities.AuthenticationRequest;
+import com.softplan.apigerenciarprocessos.modules.usuarios.entities.AuthenticationResponse;
 import com.softplan.apigerenciarprocessos.modules.usuarios.entities.Usuario;
 import com.softplan.apigerenciarprocessos.modules.usuarios.services.AuthenticationService;
 import com.softplan.apigerenciarprocessos.modules.usuarios.services.CriarUsuarioService;
-import com.softplan.apigerenciarprocessos.shared.infra.responses.ResourceNotFoundException;
+import com.softplan.apigerenciarprocessos.shared.configs.JwtUtil;
 import com.softplan.apigerenciarprocessos.shared.infra.responses.WrongCredentialsException;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -23,29 +28,36 @@ public class SessoesController {
   @Autowired
   private CriarUsuarioService criarUsuarioService;
 
-  @PostMapping()
-  public Usuario login(HttpServletResponse response, @RequestBody Usuario usuario) throws ResourceNotFoundException,
-  WrongCredentialsException {
+  @Autowired
+	private AuthenticationManager authenticationManager;
 
-    if (usuario.getSenha() == null || usuario.getSenha().isEmpty() || usuario.getEmail() == null ||
-          usuario.getEmail().isEmpty()) {
-      throw new WrongCredentialsException("E-mail and password are required fields!");
-    }
+	@Autowired
+	private JwtUtil jwtTokenUtil;
 
-    authenticationService.loadUserByUsername(usuario.getEmail());
+  @RequestMapping(value = "", method = RequestMethod.POST)
+  public ResponseEntity<?> createAuthenticationToken(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
+		try {
+			authenticationManager.authenticate(
+					new UsernamePasswordAuthenticationToken(authenticationRequest.getEmail(), authenticationRequest.getSenha())
+			);
+		}
+		catch (BadCredentialsException e) {
+			throw new WrongCredentialsException("Email ou senha incorretos!");
+		}
 
-    if (!usuario.getSenha().equals(usuario.getSenha())) {
-      throw new WrongCredentialsException("Wrong password!");
-    }
 
-    response.addHeader("Authorization", "token");
+		final UserDetails userDetails = authenticationService
+      .loadUserByUsername(authenticationRequest.getEmail());
 
-    return usuario;
-  }
+		final String jwt = jwtTokenUtil.generateToken(userDetails);
 
-  @PostMapping("/registrar")
-  public Usuario post(@RequestBody Usuario usuario) {
-      return criarUsuarioService.criarUsuario(usuario);
+		return ResponseEntity.ok(new AuthenticationResponse(jwt, userDetails));
+	}
+
+  @RequestMapping(value = "/registrar", method = RequestMethod.POST)
+  public Usuario post(@RequestBody Usuario usuarioRequest) {
+		System.out.println("********************** SessoesController /REGISTRAR" + usuarioRequest.toString());
+		return criarUsuarioService.criarUsuario(usuarioRequest);
   }
 
 }

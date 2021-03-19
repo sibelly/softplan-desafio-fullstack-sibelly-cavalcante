@@ -14,7 +14,7 @@ interface AuthState {
 
 interface SignInCredentials {
   email: string;
-  password: string;
+  senha: string;
 }
 
 interface AuthContextData {
@@ -37,12 +37,14 @@ const AuthProvider: React.FC = ({ children }) => {
     return {} as AuthState;
   });
 
-  const signIn = useCallback(async ({ email, password }) => {
-    const response = await api.post('sessions', {
+  const signIn = useCallback(async ({ email, senha }) => {
+    const response = await api.post('sessoes', {
       email,
-      password,
+      senha,
     });
-    const { token, user } = response.data;
+    console.log('adasdasd', response.data);
+    const user = response.data.usuario;
+    const token = response.data.jwt;
 
     localStorage.setItem('@GerenciarProcessos:token', token);
     localStorage.setItem('@GerenciarProcessos:user', JSON.stringify(user));
