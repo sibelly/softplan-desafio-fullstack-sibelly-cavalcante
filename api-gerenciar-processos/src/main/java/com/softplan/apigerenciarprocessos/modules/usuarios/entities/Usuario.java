@@ -1,12 +1,18 @@
 package com.softplan.apigerenciarprocessos.modules.usuarios.entities;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.softplan.apigerenciarprocessos.modules.processos.entities.ProcessoUsuario;
 import com.softplan.apigerenciarprocessos.modules.usuarios.entities.enums.Funcao;
 
 @Entity(name = "usuarios")
@@ -61,4 +67,13 @@ public class Usuario {
   public void setFuncao(Funcao funcao) {
     this.funcao = funcao;
   }
+
+  @OneToMany(
+    mappedBy = "usuario",
+    cascade = CascadeType.ALL,
+    orphanRemoval = true
+  )
+  @JsonManagedReference(value="usuario")
+  private List<ProcessoUsuario> processoUsuarios;
+
 }
