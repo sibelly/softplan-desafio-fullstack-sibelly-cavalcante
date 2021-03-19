@@ -86,11 +86,14 @@ Já a api está mais completa cumprindo a maioria do requisitos listados.
 
 Foi utilizado o banco em memória [H2](https://www.h2database.com/html/main.html).
 
+A estrutura da api segue o DDD (Domain-Driven Design).
+
 ### Melhorias no projeto
 
-- Finalizar front para criar usuário e para os outros recursos (processos e pareceres)
+- Finalizar front para criar usuário e para os outros recursos (processos e pareceres).
 - Dockerizar o front.
 - Configurar um banco de dados sem ser da memória (MySQL, PostgreSQL).
+- Implementar testes unitários para a api e para o front.
 
 ## 📝 Licença
 

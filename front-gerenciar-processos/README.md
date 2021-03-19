@@ -15,6 +15,7 @@ align="center">
 
 - [ReactJS](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [React Hooks](https://pt-br.reactjs.org/docs/hooks-intro.html)
 - [React Router DOM](https://reacttraining.com/react-router/)
 - [React Icons](https://react-icons.netlify.com/#/)
 - [UnForm](https://unform.dev/) [💜](https://rocketseat.com.br/)
