@@ -21,6 +21,7 @@ public class CriarUsuarioService {
     BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
     String hashedSenha = passwordEncoder.encode(usuario.getSenha());
     usuario.setSenha(hashedSenha);
+    System.out.println("********************** CriarUsuarioService " + usuario.getEmail() + " " + usuario.getNome() + " " + usuario.getFuncao() + " " + usuario.getSenha());
     return usuariosRepository.save(usuario);
   }
 }
