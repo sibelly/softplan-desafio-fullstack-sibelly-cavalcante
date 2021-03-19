@@ -19,9 +19,9 @@ import Button from '../../components/Button';
 import { Container, Content, AnimationContainer } from './styles';
 
 interface SignUpFormData {
-  name: string;
+  nome: string;
   email: string;
-  password: string;
+  senha: string;
 }
 
 const SignUp: React.FC = () => {
@@ -38,7 +38,7 @@ const SignUp: React.FC = () => {
           email: Yup.string()
             .required('E-mail obrigatório')
             .email('Digite um e-mail válido'),
-          password: Yup.string().min(6, 'No mínimo 6 dígitos'),
+          senha: Yup.string().min(6, 'No mínimo 6 dígitos'),
         });
 
         await schema.validate(data, {
@@ -82,7 +82,7 @@ const SignUp: React.FC = () => {
             <Input name="name" icon={FiUser} placeholder="Nome" />
             <Input name="email" icon={FiMail} placeholder="Email" />
             <Input
-              name="password"
+              name="senha"
               icon={FiLock}
               type="password"
               placeholder="Senha"
