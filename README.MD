@@ -64,6 +64,8 @@ Importe o `Insomnia.json` no [Insomnia](https://insomnia.rest/download) ou cliqu
 
 ### Requisitos
 
+- [Java 11](https://www.java.com/pt-BR/)
+- [Nodejs](https://nodejs.org/en/)
 - [Spring Boot](https://spring.io/projects/spring-boot)
 - [Apache Maven](https://maven.apache.org/)
 - [Docker](https://www.docker.com/)
